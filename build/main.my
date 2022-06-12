@@ -1,0 +1,9 @@
+fn sub(x: auto) : auto {
+	put x;
+	return x;
+}
+
+fn main() : auto {
+	put sub(12);
+}
+
