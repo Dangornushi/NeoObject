@@ -162,8 +162,9 @@ string Node::addSub() {
 		tokNumCounter += 2;
 		string s2 = mulDiv();
 		tokNumCounter++;
-        if (!isDigit(s1) && !isDigit(s2))
+        if (!isDigit(s1) && !isDigit(s2)) {
             return std::to_string(std::stoi(s1) + std::stoi(s2));
+        }
 		return s1 + "+" + s2;
 	}
 	if (token[tokNumCounter+1].tokNum == MIN) {
@@ -213,7 +214,7 @@ string Node::expr() {
 		string ret = addSub();
 		expect(")");
 //		tokNumCounter++;
-        return "(" + ret + ")";
+        return ret;
 	}
 	return word();
 }
@@ -235,9 +236,12 @@ string Node::funcCallArtgment() {
             oneArgment.push_back(',');
         }
         else {
-			string arg = expr();
-			for (int i=0;i<arg.length();i++)
-            	oneArgment.push_back(arg[i]);
+            string arg = addSub();
+            for (int i = 0; i < arg.length(); i++)
+                oneArgment.push_back(arg[i]);
+            if (token[tokNumCounter].tokNum == RBRACKET) {
+                break;
+            }
             tokNumCounter++;
         }
     }

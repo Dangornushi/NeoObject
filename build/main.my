@@ -4,6 +4,7 @@ fn sub(x: int) : int  {
 }
 
 fn main() : int {
-	let @mut s: int <- sub(12);
+	let @mut s: int <- sub(8+4);
+	return s;
 }
 

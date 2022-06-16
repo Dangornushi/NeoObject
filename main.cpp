@@ -40,7 +40,7 @@ int main(void) {
     langMode = CPP;
     token = lexer.lex(mainclass.fileData);
     mainclass.runCode = node.parse(token);
-	(langMode == PYTHON) ? mainclass.runCode+="\nmain()" : mainclass.runCode+="\n_start():\n\tmain()";
+	(langMode == PYTHON) ? mainclass.runCode+="\nmain()" : mainclass.runCode+="\nint start(void) {\n\treturn main();\n}";
 
 	mainclass.write();
     return 0;
