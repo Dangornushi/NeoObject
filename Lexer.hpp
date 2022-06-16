@@ -6,6 +6,7 @@
 #define LEN_FN 3
 #define LEN_IF 3
 #define LEN_LET 4
+#define LEN_MUT 5
 #define LEN_PUT 4
 #define LEN_ELSE 5
 #define LEN_ELIF 5
@@ -28,6 +29,10 @@ class Lexer {
         {'.', PERIOD},
         {'<', BIG},
         {'>', MINI},
+		{'+', PLUS},
+		{'-', MIN},
+		{'*', MUL},
+		{'/', DIV},
     };
 
   public:

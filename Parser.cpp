@@ -1,234 +1,277 @@
 #include "Parser.hpp"
+#include "Node.hpp"
 
 // loop to the end of file.
-vector<string> Parser::parse(vector<tokens> geToken) {
-    vector<string> writeVector;
-    token = geToken;
+string Node::parse(vector<tokens> geToken) {
     tokNumCounter = 0;
-    nowIndent = 0;
-    writeVector.push_back(parserSort(token[tokNumCounter].tokNum));
-    return writeVector;
+    string write;
+    token = geToken;
+	write = functionDefiniton();
+
+    return write;
 }
 
-// the tokens sort.
-string Parser::parserSort(int tokenByte) {
-    string writeData = "";
-    cout << "DEBUG: " << token[tokNumCounter].tokChar << endl;
-    switch (tokenByte) {
-            // define the function
-        case FN: {
-            string functionName = "";
-            string argment = "";
-            string type = "";
+void Node::expect(string str) {
+	if (token[tokNumCounter].tokChar != str) {
+		cout << "Err: " << token[tokNumCounter].tokChar << "But: " << str << endl;
+		exit(1);
+	}
+}
+
+string Node::functionDefiniton() {
+    if (token[tokNumCounter].tokNum == FN) {
+        string argment = "";
+        string functionName;
+        string functionType;
+		string functionData;
+		string ret;
+
+		indent++;
+
+        tokNumCounter++; // fn
+
+        functionName = word();
+
+        tokNumCounter++;
+
+        if (token[tokNumCounter].tokNum == LBRACKET) {
+            tokNumCounter++; // (
+			if (token[tokNumCounter].tokNum != RBRACKET)
+            	argment = funcDefArtgment();
+            tokNumCounter++; // )
+	
+        }
+
+        expect(":");
+
+        tokNumCounter++;
+
+        functionType = word();
+
+		string Fsent = "fn " + functionName + "(" + argment + ") : ";  
+
+
+        if (functionType == "auto") {
+			cout << Fsent + functionType << endl;;
+            for (int i= 0; i < Fsent.length();i++)
+                cout << " " << std::flush;
+            cout << "^ Can't use 'auto' for function return value." << endl;
+        }
+
+        tokNumCounter++;
+
+        expect("{");
+
+        tokNumCounter++;
+
+		functionData = sent();
+
+        expect("}");
+
+        tokNumCounter++;
+
+		indent--;
+
+		valMemory.push_back({0, False, functionType, functionName});
+
+		ret = functionType + " " + functionName + " (" + argment + ") {\n" + functionData + "\n}" + functionDefiniton();
+		
+
+        return ret;
+    }
+    return "";
+}
+
+
+string Node::sent() {
+    switch (token[tokNumCounter].tokNum) {
+        case LET: {
+            int isMut;
+            string valueName;
+            string valueType;
+            string data;
+            string ret;
+
+            expect("let");
+            tokNumCounter++;
+            if (token[tokNumCounter].tokNum == MUT) {
+                isMut = True;
+                tokNumCounter++;
+            } else
+                isMut = False;
+
+            valueName = token[tokNumCounter++].tokChar;
+
+            expect(":");
 
             tokNumCounter++;
 
-            // entry point ?
-            if (token[tokNumCounter].tokNum == ENTRY) {
-				functionName = "main";
-            } else {
-				// get function name
-                functionName = parserSort(token[tokNumCounter].tokNum);
+            //if (valMemory.)
+            valueType = token[tokNumCounter++].tokChar;
+
+            expect("<-");
+
+            tokNumCounter++;
+
+            data = addSub();
+
+            expect(";");
+
+            tokNumCounter++;
+
+            int hasType = True;
+
+            for (vector<Type>::const_iterator i = valMemory.begin(); i != valMemory.end(); i++) {
+                if (i->name == valueName)
+                    // もうすでに変数が存在する
+                    break;
+                else
+                    // 初めて宣言される
+                    hasType = False;
             }
 
-            // tokNumCounter: (
-            tokNumCounter++;
-            // tokNumCounter: argment or )
-
-            if (token[++tokNumCounter].tokChar[0] != ')') {
-                // get argment
-
-                if (langMode == PYTHON)
-                    argment = getArgment(PY_D_C);
-                else
-                    argment = getArgment(C_DEF);
-            } else
-                ;
-
-			// tokNumCounter: )
-            tokNumCounter+=2;
-            // tokNumCounter: : type
-
-			type = token[++tokNumCounter].tokChar;
-
-			// tokNumCounter: {
-            tokNumCounter++;
-            // tokNumCounter:  something
-
-			// add indent
-			nowIndent++;
-
-            langMode == PYTHON ? writeData = "def " + functionName + "(" + argment + "):"
-                               : writeData = "void" + functionName + "(" + argment + ") {";
-
-			// ここから
-        	writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-
-			// ここまでで何かが起こってる
-
-			if (langMode == CPP)
-				writeData += "}";
-
-			// sub indent
-			nowIndent--;
-
-			tokNumCounter+=2;
-			writeData += parserSort(token[tokNumCounter].tokNum);
-        } break;
-        case PUT: {
-
-            string putArgment = "";
-
-            // tokNumCounter: put
-            tokNumCounter++;
-            // tokNumCounter: put argment
-
-            putArgment = parserSort(token[tokNumCounter].tokNum);
-
-            tokNumCounter++;
-			/* ===--- ---=== 
-			 * insert expect(";")
-			 * ===--- ---===*/
-            tokNumCounter++;
-
-            langMode == PYTHON ? writeData = addIndent() + "print(" + putArgment + ")"
-                               : writeData = "std::cout << " + putArgment + " << std::endl";
-
-			cout << "OK: PUT END" << endl;
-
-            writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-
-
-        } break;
-        case LET: {
-            string valName = ""; // valetage name
-            string valType = ""; // valetage type
-            string valData = ""; // valetage data
-            string type = ""; // if valetage type is auto; change type name
-
-            tokNumCounter++;
-            valName = token[tokNumCounter].tokChar;
-            tokNumCounter += 2;
-            valType = token[tokNumCounter].tokChar;
-            tokNumCounter += 2;
-            valData = parserSort(token[tokNumCounter].tokNum);	
-
-            if (langMode == CPP && valType == "auto") {
-                isNumber(valData) ? writeData = "int " + valName + " = " + valData + ";"
-                                   : writeData = "std::string " +  valName + " = " + valData + ";";
-            } else
-                ;
-
-            langMode == PYTHON ? writeData = addIndent() + valName + " = " + valData
-                               : writeData = type + " " + valName + " = " + valData + ";";
-            tokNumCounter++;
-			/* ===--- ---=== 
-			 * insert expect(";")
-			 * ===--- ---===*/
-            tokNumCounter++;
-
-			writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-        } break;
-        case RETURN: {
-
-            tokNumCounter++;
-
-            string retArg = parserSort(token[tokNumCounter].tokNum);
-            tokNumCounter++;
-            langMode == PYTHON ? writeData = addIndent() + "return " + retArg
-                               : writeData = addIndent() + "return " + retArg + ";";
-
-            writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-
-        } break;
-        case IF: {
-            string ifForm = "";
-            tokNumCounter++;
-            ifForm = parserSort(token[tokNumCounter].tokNum);
-
-            langMode == PYTHON ? writeData = addIndent() + "if " + ifForm + ":"
-                               : writeData = addIndent() + "if (" + ifForm + ") {";
-
-            tokNumCounter += 2;
-
-            nowIndent++;
-
-            writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-
-            nowIndent--;
-
-            if (langMode == CPP)
-                writeData += "}";
+			valMemory.push_back({0, isMut, valueType, valueName});
+            if (hasType == True)
+                ret = addIndent() + valueName + " = " + data + ";\n" + sent() ;
             else
-                /* ===--- ---===
-                 * insert expect("}")
-                 * ===--- ---===*/
-                tokNumCounter++;
-            writeData += "\n" + parserSort(token[tokNumCounter].tokNum);
-        } break;
-        case WORD: {
-            char nextChar = token[tokNumCounter + 1].tokChar[0];
-			string nowString = token[tokNumCounter].tokChar; 
-            if (nextChar == '>' || nextChar == '<') {
-                tokNumCounter+=2;
-				return nowString + " " + nextChar + " " + parserSort(token[tokNumCounter].tokNum);
-			}	
-            if (nextChar == '(' && token[tokNumCounter - 1].tokNum != FN) {
-                tokNumCounter += 2;
-                string funcName = token[tokNumCounter - 2].tokChar;
-                writeData = addIndent() + funcName + "(" + getArgment(PY_D_C) + ")";
-                cout << "OK: WORD / function name" << endl;
-            }	
-			else
-                writeData += token[tokNumCounter].tokChar;
+                ret = addIndent() + valueType + " " +  valueName + " = " + data + ";\n" + sent() ; 
 
-        } break;
+            return ret;
+
+    } break;
+		case RETURN: {
+			expect("return");
+            tokNumCounter++;
+
+			string ret =  addIndent() + "return " + expr() + ";";
+
+            tokNumCounter++;
+			expect(";");
+            tokNumCounter++;
+
+			return ret + sent();
+
+		} break;
     }
-    return writeData;
+    return " ";
 }
 
-bool Parser::isNumber(const string &str) {
-    for (char const &c : str) {
-        if (std::isdigit(c) == 0)
-            return false;
-    }
-    return true;
+string Node::addSub() {
+	if (token[tokNumCounter+1].tokNum == PLUS) {
+		string s1 = mulDiv();
+		tokNumCounter += 2;
+		string s2 = mulDiv();
+		tokNumCounter++;
+        if (!isDigit(s1) && !isDigit(s2))
+            return std::to_string(std::stoi(s1) + std::stoi(s2));
+		return s1 + "+" + s2;
+	}
+	if (token[tokNumCounter+1].tokNum == MIN) {
+		string s1 = mulDiv();
+		tokNumCounter += 2;
+		string s2 = mulDiv();
+		tokNumCounter++;
+		return s1 + "-" + s2;
+	}
+	return mulDiv();
 }
 
-string Parser::getArgment(int mode) {
-    vector<Argment> defuncArgment = {};
-    vector<string> oneArgment = {};
-    string returnArgment = "";
-    int argmentCounter = tokNumCounter;
-    cout << "OK: getArgment" << endl;
-    while (1) {
-        if (token[argmentCounter - 1].tokChar[0] == ',' ||
-            token[argmentCounter].tokChar[0] == ')') {
+string Node::mulDiv() {
+	if (token[tokNumCounter+1].tokNum == MUL) {
+		string s1 = funCall();
+		tokNumCounter += 2;
+		string s2 = funCall();
+		tokNumCounter++;
+		return s1 + "*" + s2;
+	}
+	if (token[tokNumCounter+1].tokNum == DIV) {
+		string s1 = funCall();
+		tokNumCounter += 2;
+		string s2 = funCall();
+		tokNumCounter++;
+		return s1 + "/" + s2;
+	}
+	return funCall();
+}
 
-			// add argment ( size | len, scope, type, data  )
-            defuncArgment.push_back({0, 0, "void", oneArgment[0]});
+string Node::funCall() {
+	if (token[tokNumCounter+1].tokNum == LBRACKET) {
+		string funcName = token[tokNumCounter++].tokChar;
+		tokNumCounter++;
+		string argment = funcCallArtgment();
+		expect(")");
+        string ret = funcName + "(" + argment + ")";
+		tokNumCounter++;
+		return ret;
+	}
+	return expr();
+}
 
-            oneArgment = {};
-            returnArgment += oneArgment[0];
-            returnArgment += ", ";
+string Node::expr() {
+	if (token[tokNumCounter].tokNum == LBRACKET) {
+		tokNumCounter++;
+		string ret = addSub();
+		expect(")");
+//		tokNumCounter++;
+        return "(" + ret + ")";
+	}
+	return word();
+}
+
+
+string Node::word() {
+    return token[tokNumCounter].tokChar;
+}
+
+string Node::funcCallArtgment() {
+	string returnFunctionArgment = "";
+	string oneArgment;
+
+	while (1) {
+        if (token[tokNumCounter].tokNum== RBRACKET) {
+            break;
+		}
+        if (token[tokNumCounter - 1].tokNum == CANMA) {
+            oneArgment.push_back(',');
         }
-        if (token[argmentCounter].tokChar[0] == ')') {
-			returnArgment.erase(returnArgment.end()-2, returnArgment.end());
+        else {
+			string arg = expr();
+			for (int i=0;i<arg.length();i++)
+            	oneArgment.push_back(arg[i]);
+            tokNumCounter++;
+        }
+    }
+
+	return oneArgment;
+}
+
+string Node::funcDefArtgment() {
+	string returnFunctionArgment = "";
+	vector<string> oneArgment;
+
+	while (1) {
+        if (token[tokNumCounter - 1].tokChar[0] == ',' || token[tokNumCounter].tokChar[0] == ')') {
+            returnFunctionArgment += oneArgment[2] + " " + oneArgment[0];
+            returnFunctionArgment += ", ";
+			oneArgment = {};
+        }
+        if (token[tokNumCounter].tokChar[0] == ')') {
+			returnFunctionArgment.erase(returnFunctionArgment.end()-2, returnFunctionArgment.end());
             break;
 		}
         else {
-            oneArgment.push_back(token[argmentCounter].tokChar);
-            argmentCounter++;
+            oneArgment.push_back(token[tokNumCounter].tokChar);
+            tokNumCounter++;
         }
     }
-    tokNumCounter = argmentCounter;
-    return returnArgment;
+
+	return returnFunctionArgment;
 }
 
-string Parser::addIndent() {
-	string indent = "";
-	for (int i=0;i<nowIndent;i++)
-		indent += "\t"; 
-	return indent;
+string Node::addIndent() {
+	string ret = "";
+	for (int i=0;i<indent;i++)
+		ret += "\t"; 
+	return ret;
 }
 

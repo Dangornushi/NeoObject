@@ -4,6 +4,7 @@
 #include <fstream>
 
 int langMode;
+int debugMode;
 
 void Main::open() {
 
@@ -16,31 +17,31 @@ void Main::open() {
         return;
 }
 
+void Main::write() {    
+    cout << runCode << endl;
+}
+
+int isDigit(string s1) {
+    for (int i=0;i<s1.length();i++) {
+        if (!isdigit(s1[i]))
+            return True;
+    }
+    return False;
+}
+
 int main(void) {
+	debugMode = 1;
     Main mainclass;
     vector<tokens> token;
-    vector<string> runCode;
-	/*
-    mainclass.fileData = "fn restart (x: auto) : int {"                 "\n"
-                         "    let x:auto = 13;"                       "\n"
-						 "    if x < 35 {"                            "\n"
-                         "        put x;"                             "\n"
-						 "    }"                                      "\n"
-                         "    return x;"                              "\n"
-                         "}"                                          "\n"
-                         "fn main () : int {"                         "\n"
-                         "         restart(x);"                         "\n"
-                         "}"                                          "\n";
-						 */
 	mainclass.fileName = "main.my";
 
 	mainclass.open();
 
-    langMode = PYTHON;
+    langMode = CPP;
     token = lexer.lex(mainclass.fileData);
-    runCode = parser.parse(token);
-	langMode == PYTHON ? runCode.push_back("main()") : runCode.push_back("_start():");
-    for (auto tmp : runCode)
-        cout << tmp << endl;
+    mainclass.runCode = node.parse(token);
+	(langMode == PYTHON) ? mainclass.runCode+="\nmain()" : mainclass.runCode+="\n_start():\n\tmain()";
+
+	mainclass.write();
     return 0;
 }

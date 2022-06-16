@@ -7,13 +7,19 @@
 #define PYTHON 0
 #define CPP 1
 
+#define True 1
+#define False 0
+
 using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
 using std::map;
 
+int isDigit(string s1);
+
 extern int langMode;
+extern int debugMode;
 
 struct tokens{
 	int tokNum;
@@ -34,6 +40,7 @@ enum RESERV {
 	WHILE,
 	LOOP,
 	CALL,
+	MUT,
 
 	/* TYPE AND VARs */
 	WORD,
@@ -55,5 +62,12 @@ enum RESERV {
 	PERIOD,
 	BIG,
 	MINI,
+	DOUBLEQUOT,
+	SINGLEQUOT,
+	PLUS,
+	MIN,
+	MUL,
+	DIV,
+	EQ,
 };
 

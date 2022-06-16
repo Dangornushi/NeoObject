@@ -42,6 +42,12 @@ vector<tokens> Lexer::lex(string fileData) {
             i += LEN_LET - 1;
             continue;
         }
+        /*===--- mut ---=== */
+        if (fileData.substr(i, LEN_MUT) == "@mut ") {
+            token.push_back({MUT, "@mut"});
+            i += LEN_MUT - 1;
+            continue;
+        }
         /*===--- put ---=== */
         if (fileData.substr(i, LEN_PUT) == "put ") {
             token.push_back({PUT, "put"});
@@ -54,9 +60,9 @@ vector<tokens> Lexer::lex(string fileData) {
             i += LEN_IF - 1;
             continue;
         }
-		if (fileData.substr(i, LEN_CALL) == "<-") {
-            token.push_back({CALL, "<-"});
-            i += LEN_CALL;
+		if (fileData.substr(i, 2) == "<-") {
+            token.push_back({EQ, "<-"});
+            i += 2;
             continue;
 		}
         /*===--- op(MAP : OP) ---=== */
