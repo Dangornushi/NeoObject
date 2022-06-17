@@ -83,49 +83,97 @@ CMakeFiles/neObj.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/main.cpp -o CMakeFiles/neObj.dir/main.cpp.s
 
-CMakeFiles/neObj.dir/Lexer.cpp.o: CMakeFiles/neObj.dir/flags.make
-CMakeFiles/neObj.dir/Lexer.cpp.o: ../Lexer.cpp
-CMakeFiles/neObj.dir/Lexer.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/neObj.dir/Lexer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Lexer.cpp.o -MF CMakeFiles/neObj.dir/Lexer.cpp.o.d -o CMakeFiles/neObj.dir/Lexer.cpp.o -c /Users/dangomushi/NeoObject/Lexer.cpp
+CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o: CMakeFiles/neObj.dir/flags.make
+CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o: ../Lexer/Lexer.cpp
+CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o -MF CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o.d -o CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o -c /Users/dangomushi/NeoObject/Lexer/Lexer.cpp
 
-CMakeFiles/neObj.dir/Lexer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Lexer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Lexer.cpp > CMakeFiles/neObj.dir/Lexer.cpp.i
+CMakeFiles/neObj.dir/Lexer/Lexer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Lexer/Lexer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Lexer/Lexer.cpp > CMakeFiles/neObj.dir/Lexer/Lexer.cpp.i
 
-CMakeFiles/neObj.dir/Lexer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Lexer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Lexer.cpp -o CMakeFiles/neObj.dir/Lexer.cpp.s
+CMakeFiles/neObj.dir/Lexer/Lexer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Lexer/Lexer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Lexer/Lexer.cpp -o CMakeFiles/neObj.dir/Lexer/Lexer.cpp.s
 
-CMakeFiles/neObj.dir/Parser.cpp.o: CMakeFiles/neObj.dir/flags.make
-CMakeFiles/neObj.dir/Parser.cpp.o: ../Parser.cpp
-CMakeFiles/neObj.dir/Parser.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/neObj.dir/Parser.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Parser.cpp.o -MF CMakeFiles/neObj.dir/Parser.cpp.o.d -o CMakeFiles/neObj.dir/Parser.cpp.o -c /Users/dangomushi/NeoObject/Parser.cpp
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: CMakeFiles/neObj.dir/flags.make
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: ../Node/NodeArgment.cpp
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o -MF CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o.d -o CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o -c /Users/dangomushi/NeoObject/Node/NodeArgment.cpp
 
-CMakeFiles/neObj.dir/Parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Parser.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Parser.cpp > CMakeFiles/neObj.dir/Parser.cpp.i
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Node/NodeArgment.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Node/NodeArgment.cpp > CMakeFiles/neObj.dir/Node/NodeArgment.cpp.i
 
-CMakeFiles/neObj.dir/Parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Parser.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Parser.cpp -o CMakeFiles/neObj.dir/Parser.cpp.s
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Node/NodeArgment.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Node/NodeArgment.cpp -o CMakeFiles/neObj.dir/Node/NodeArgment.cpp.s
+
+CMakeFiles/neObj.dir/Node/NodeSent.cpp.o: CMakeFiles/neObj.dir/flags.make
+CMakeFiles/neObj.dir/Node/NodeSent.cpp.o: ../Node/NodeSent.cpp
+CMakeFiles/neObj.dir/Node/NodeSent.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/neObj.dir/Node/NodeSent.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Node/NodeSent.cpp.o -MF CMakeFiles/neObj.dir/Node/NodeSent.cpp.o.d -o CMakeFiles/neObj.dir/Node/NodeSent.cpp.o -c /Users/dangomushi/NeoObject/Node/NodeSent.cpp
+
+CMakeFiles/neObj.dir/Node/NodeSent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Node/NodeSent.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Node/NodeSent.cpp > CMakeFiles/neObj.dir/Node/NodeSent.cpp.i
+
+CMakeFiles/neObj.dir/Node/NodeSent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Node/NodeSent.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Node/NodeSent.cpp -o CMakeFiles/neObj.dir/Node/NodeSent.cpp.s
+
+CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o: CMakeFiles/neObj.dir/flags.make
+CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o: ../Node/NodeFunctionDefinition.cpp
+CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o -MF CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o.d -o CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o -c /Users/dangomushi/NeoObject/Node/NodeFunctionDefinition.cpp
+
+CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Node/NodeFunctionDefinition.cpp > CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.i
+
+CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Node/NodeFunctionDefinition.cpp -o CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.s
+
+CMakeFiles/neObj.dir/Node/Node.cpp.o: CMakeFiles/neObj.dir/flags.make
+CMakeFiles/neObj.dir/Node/Node.cpp.o: ../Node/Node.cpp
+CMakeFiles/neObj.dir/Node/Node.cpp.o: CMakeFiles/neObj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/neObj.dir/Node/Node.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neObj.dir/Node/Node.cpp.o -MF CMakeFiles/neObj.dir/Node/Node.cpp.o.d -o CMakeFiles/neObj.dir/Node/Node.cpp.o -c /Users/dangomushi/NeoObject/Node/Node.cpp
+
+CMakeFiles/neObj.dir/Node/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neObj.dir/Node/Node.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dangomushi/NeoObject/Node/Node.cpp > CMakeFiles/neObj.dir/Node/Node.cpp.i
+
+CMakeFiles/neObj.dir/Node/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neObj.dir/Node/Node.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dangomushi/NeoObject/Node/Node.cpp -o CMakeFiles/neObj.dir/Node/Node.cpp.s
 
 # Object files for target neObj
 neObj_OBJECTS = \
 "CMakeFiles/neObj.dir/main.cpp.o" \
-"CMakeFiles/neObj.dir/Lexer.cpp.o" \
-"CMakeFiles/neObj.dir/Parser.cpp.o"
+"CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o" \
+"CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o" \
+"CMakeFiles/neObj.dir/Node/NodeSent.cpp.o" \
+"CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o" \
+"CMakeFiles/neObj.dir/Node/Node.cpp.o"
 
 # External object files for target neObj
 neObj_EXTERNAL_OBJECTS =
 
 neObj: CMakeFiles/neObj.dir/main.cpp.o
-neObj: CMakeFiles/neObj.dir/Lexer.cpp.o
-neObj: CMakeFiles/neObj.dir/Parser.cpp.o
+neObj: CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o
+neObj: CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o
+neObj: CMakeFiles/neObj.dir/Node/NodeSent.cpp.o
+neObj: CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o
+neObj: CMakeFiles/neObj.dir/Node/Node.cpp.o
 neObj: CMakeFiles/neObj.dir/build.make
 neObj: CMakeFiles/neObj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable neObj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable neObj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neObj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

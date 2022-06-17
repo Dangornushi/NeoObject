@@ -1,5 +1,6 @@
-CMakeFiles/neObj.dir/main.cpp.o: /Users/dangomushi/NeoObject/main.cpp \
-  /Users/dangomushi/NeoObject/./Main.hpp \
+CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: \
+  /Users/dangomushi/NeoObject/Node/NodeArgment.cpp \
+  /Users/dangomushi/NeoObject/Node/Node.hpp \
   /Users/dangomushi/NeoObject/./neObj.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
@@ -235,11 +236,4 @@ CMakeFiles/neObj.dir/main.cpp.o: /Users/dangomushi/NeoObject/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/optional \
-  /Users/dangomushi/NeoObject/Lexer/Lexer.hpp \
-  /Users/dangomushi/NeoObject/Node/Node.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/fstream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iomanip
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/optional

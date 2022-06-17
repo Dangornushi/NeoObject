@@ -190,6 +190,24 @@ CMAKE_STRIP:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Lex_BINARY_DIR:STATIC=/Users/dangomushi/NeoObject/build/Lexer
+
+//Value Computed by CMake
+Lex_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Lex_SOURCE_DIR:STATIC=/Users/dangomushi/NeoObject/Lexer
+
+//Value Computed by CMake
+Node_BINARY_DIR:STATIC=/Users/dangomushi/NeoObject/build/Node
+
+//Value Computed by CMake
+Node_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Node_SOURCE_DIR:STATIC=/Users/dangomushi/NeoObject/Node
+
+//Value Computed by CMake
 neObj_BINARY_DIR:STATIC=/Users/dangomushi/NeoObject/build
 
 //Value Computed by CMake

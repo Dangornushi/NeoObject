@@ -81,12 +81,12 @@ clean: CMakeFiles/neObj.dir/clean
 CMakeFiles/neObj.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=1,2,3,4 "Built target neObj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/dangomushi/NeoObject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target neObj"
 .PHONY : CMakeFiles/neObj.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/neObj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dangomushi/NeoObject/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dangomushi/NeoObject/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/neObj.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dangomushi/NeoObject/build/CMakeFiles 0
 .PHONY : CMakeFiles/neObj.dir/rule

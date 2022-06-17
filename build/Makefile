@@ -129,53 +129,125 @@ neObj/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/build
 .PHONY : neObj/fast
 
-Lexer.o: Lexer.cpp.o
-.PHONY : Lexer.o
+Lexer/Lexer.o: Lexer/Lexer.cpp.o
+.PHONY : Lexer/Lexer.o
 
 # target to build an object file
-Lexer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer.cpp.o
-.PHONY : Lexer.cpp.o
+Lexer/Lexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o
+.PHONY : Lexer/Lexer.cpp.o
 
-Lexer.i: Lexer.cpp.i
-.PHONY : Lexer.i
+Lexer/Lexer.i: Lexer/Lexer.cpp.i
+.PHONY : Lexer/Lexer.i
 
 # target to preprocess a source file
-Lexer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer.cpp.i
-.PHONY : Lexer.cpp.i
+Lexer/Lexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer/Lexer.cpp.i
+.PHONY : Lexer/Lexer.cpp.i
 
-Lexer.s: Lexer.cpp.s
-.PHONY : Lexer.s
+Lexer/Lexer.s: Lexer/Lexer.cpp.s
+.PHONY : Lexer/Lexer.s
 
 # target to generate assembly for a file
-Lexer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer.cpp.s
-.PHONY : Lexer.cpp.s
+Lexer/Lexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Lexer/Lexer.cpp.s
+.PHONY : Lexer/Lexer.cpp.s
 
-Parser.o: Parser.cpp.o
-.PHONY : Parser.o
+Node/Node.o: Node/Node.cpp.o
+.PHONY : Node/Node.o
 
 # target to build an object file
-Parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Parser.cpp.o
-.PHONY : Parser.cpp.o
+Node/Node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/Node.cpp.o
+.PHONY : Node/Node.cpp.o
 
-Parser.i: Parser.cpp.i
-.PHONY : Parser.i
+Node/Node.i: Node/Node.cpp.i
+.PHONY : Node/Node.i
 
 # target to preprocess a source file
-Parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Parser.cpp.i
-.PHONY : Parser.cpp.i
+Node/Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/Node.cpp.i
+.PHONY : Node/Node.cpp.i
 
-Parser.s: Parser.cpp.s
-.PHONY : Parser.s
+Node/Node.s: Node/Node.cpp.s
+.PHONY : Node/Node.s
 
 # target to generate assembly for a file
-Parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Parser.cpp.s
-.PHONY : Parser.cpp.s
+Node/Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/Node.cpp.s
+.PHONY : Node/Node.cpp.s
+
+Node/NodeArgment.o: Node/NodeArgment.cpp.o
+.PHONY : Node/NodeArgment.o
+
+# target to build an object file
+Node/NodeArgment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o
+.PHONY : Node/NodeArgment.cpp.o
+
+Node/NodeArgment.i: Node/NodeArgment.cpp.i
+.PHONY : Node/NodeArgment.i
+
+# target to preprocess a source file
+Node/NodeArgment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeArgment.cpp.i
+.PHONY : Node/NodeArgment.cpp.i
+
+Node/NodeArgment.s: Node/NodeArgment.cpp.s
+.PHONY : Node/NodeArgment.s
+
+# target to generate assembly for a file
+Node/NodeArgment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeArgment.cpp.s
+.PHONY : Node/NodeArgment.cpp.s
+
+Node/NodeFunctionDefinition.o: Node/NodeFunctionDefinition.cpp.o
+.PHONY : Node/NodeFunctionDefinition.o
+
+# target to build an object file
+Node/NodeFunctionDefinition.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o
+.PHONY : Node/NodeFunctionDefinition.cpp.o
+
+Node/NodeFunctionDefinition.i: Node/NodeFunctionDefinition.cpp.i
+.PHONY : Node/NodeFunctionDefinition.i
+
+# target to preprocess a source file
+Node/NodeFunctionDefinition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.i
+.PHONY : Node/NodeFunctionDefinition.cpp.i
+
+Node/NodeFunctionDefinition.s: Node/NodeFunctionDefinition.cpp.s
+.PHONY : Node/NodeFunctionDefinition.s
+
+# target to generate assembly for a file
+Node/NodeFunctionDefinition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.s
+.PHONY : Node/NodeFunctionDefinition.cpp.s
+
+Node/NodeSent.o: Node/NodeSent.cpp.o
+.PHONY : Node/NodeSent.o
+
+# target to build an object file
+Node/NodeSent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeSent.cpp.o
+.PHONY : Node/NodeSent.cpp.o
+
+Node/NodeSent.i: Node/NodeSent.cpp.i
+.PHONY : Node/NodeSent.i
+
+# target to preprocess a source file
+Node/NodeSent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeSent.cpp.i
+.PHONY : Node/NodeSent.cpp.i
+
+Node/NodeSent.s: Node/NodeSent.cpp.s
+.PHONY : Node/NodeSent.s
+
+# target to generate assembly for a file
+Node/NodeSent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/neObj.dir/build.make CMakeFiles/neObj.dir/Node/NodeSent.cpp.s
+.PHONY : Node/NodeSent.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -210,12 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... neObj"
-	@echo "... Lexer.o"
-	@echo "... Lexer.i"
-	@echo "... Lexer.s"
-	@echo "... Parser.o"
-	@echo "... Parser.i"
-	@echo "... Parser.s"
+	@echo "... Lexer/Lexer.o"
+	@echo "... Lexer/Lexer.i"
+	@echo "... Lexer/Lexer.s"
+	@echo "... Node/Node.o"
+	@echo "... Node/Node.i"
+	@echo "... Node/Node.s"
+	@echo "... Node/NodeArgment.o"
+	@echo "... Node/NodeArgment.i"
+	@echo "... Node/NodeArgment.s"
+	@echo "... Node/NodeFunctionDefinition.o"
+	@echo "... Node/NodeFunctionDefinition.i"
+	@echo "... Node/NodeFunctionDefinition.s"
+	@echo "... Node/NodeSent.o"
+	@echo "... Node/NodeSent.i"
+	@echo "... Node/NodeSent.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

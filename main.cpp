@@ -6,19 +6,33 @@
 int langMode;
 int debugMode;
 
+string splitStr(string s1) {
+    string ret;
+    for (auto tmp:s1) {
+        if (tmp == '.') 
+            return ret;
+        ret += tmp;
+    }
+    return "";
+}
+
 void Main::open() {
 
 	string filedata;
 	std::ifstream reading_file;
 	reading_file.open(fileName, std::ios::in);
 
-        while (std::getline(reading_file, filedata))
-			fileData += filedata;
-        return;
+    while (std::getline(reading_file, filedata))
+		fileData += filedata;
+    return;
 }
 
 void Main::write() {    
-    cout << runCode << endl;
+    string fileBuf;
+    std::ofstream writing_file;
+    writing_file.open(splitStr(fileName)+".c", std::ios::out);
+    writing_file << runCode;
+    writing_file.close();
 }
 
 int isDigit(string s1) {

@@ -38,16 +38,20 @@ struct Node {
 	vector<tokens> token;
     int tokNumCounter;
 	int indent;
+	int ownership;
 	void expect(string str);
-    string addIndent();
 	vector<Type>valMemory;
+    string addIndent();
 	string parse(vector<tokens> geToken);
 
-    string functionDefiniton();
-	string funCall();
-	string sent();
+	string eval();
+	string comparison(int i, string ret);
 	string funcDefArtgment();
 	string funcCallArtgment();
+
+    string functionDefinition();
+	string funCall();
+	string sent();
 	string expr();
 	string mulDiv();
 	string addSub();

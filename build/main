@@ -1,7 +1,5 @@
 int sub (int x) {
-	if (x>0) {
-		return sub(x-1); 
-	}
+	x = x/6;
 	return x; 
 }int main () {
 	int s = sub(12);

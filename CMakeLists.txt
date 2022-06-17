@@ -1,4 +1,6 @@
+set(INCLUDE_DIRS  Lexer/ Node/ ./)
 cmake_minimum_required(VERSION 3.23.1)
 project(neObj CXX)
-add_executable(neObj main.cpp Lexer.cpp Parser.cpp)
+include_directories(${INCLUDE_DIRS})
+add_executable(neObj main.cpp Lexer/Lexer.cpp Node/NodeArgment.cpp Node/NodeSent.cpp Node/NodeFunctionDefinition.cpp Node/Node.cpp)
 set_property(TARGET neObj PROPERTY CXX_STANDARD 20)                       
