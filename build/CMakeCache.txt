@@ -125,7 +125,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=neObj
+CMAKE_PROJECT_NAME:STATIC=cru
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ranlib
@@ -206,6 +206,15 @@ Node_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 Node_SOURCE_DIR:STATIC=/Users/dangomushi/NeoObject/Node
+
+//Value Computed by CMake
+cru_BINARY_DIR:STATIC=/Users/dangomushi/NeoObject/build
+
+//Value Computed by CMake
+cru_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cru_SOURCE_DIR:STATIC=/Users/dangomushi/NeoObject
 
 //Value Computed by CMake
 neObj_BINARY_DIR:STATIC=/Users/dangomushi/NeoObject/build

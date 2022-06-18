@@ -1,9 +1,0 @@
-fn sub(x: int) : int  {
-	return x / (10-4);
-}
-
-fn main() : int {
-	let @mut s: int <- sub(8+4);
-	return s;
-}
-

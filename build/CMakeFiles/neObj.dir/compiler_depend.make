@@ -3,7 +3,7 @@
 
 CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o: ../Lexer/Lexer.cpp \
   ../Lexer/Lexer.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -242,7 +242,7 @@ CMakeFiles/neObj.dir/Lexer/Lexer.cpp.o: ../Lexer/Lexer.cpp \
 
 CMakeFiles/neObj.dir/Node/Node.cpp.o: ../Node/Node.cpp \
   ../Node/Node.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -481,7 +481,7 @@ CMakeFiles/neObj.dir/Node/Node.cpp.o: ../Node/Node.cpp \
 
 CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: ../Node/NodeArgment.cpp \
   ../Node/Node.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -720,7 +720,7 @@ CMakeFiles/neObj.dir/Node/NodeArgment.cpp.o: ../Node/NodeArgment.cpp \
 
 CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o: ../Node/NodeFunctionDefinition.cpp \
   ../Node/Node.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -959,7 +959,7 @@ CMakeFiles/neObj.dir/Node/NodeFunctionDefinition.cpp.o: ../Node/NodeFunctionDefi
 
 CMakeFiles/neObj.dir/Node/NodeSent.cpp.o: ../Node/NodeSent.cpp \
   ../Node/Node.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -1198,7 +1198,7 @@ CMakeFiles/neObj.dir/Node/NodeSent.cpp.o: ../Node/NodeSent.cpp \
 
 CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
   ../Main.hpp \
-  ../neObj.hpp \
+  ../CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -1723,8 +1723,6 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
-../neObj.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_types/_clock_t.h:
 
 ../Lexer/Lexer.cpp:
@@ -1877,6 +1875,8 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_types/_uintptr_t.h:
 
+../CRU.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/machine/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_types/_size_t.h:
@@ -1887,23 +1887,9 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/i386/_types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/cdefs.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/machine/_types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__mutex_base:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__debug:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sched.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__tuple:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/stdexcept:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/functional:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/wchar.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_symbol_aliasing.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/string.h:
 
@@ -1915,9 +1901,17 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/ctype.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_symbol_aliasing.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/functional:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/machine/_types.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__mutex_base:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/cdefs.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/wchar.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/stdexcept:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__tuple:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/string:
 
@@ -1929,10 +1923,6 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iosfwd:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/i386/endian.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config:
-
 ../Lexer/Lexer.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/string.h:
@@ -1940,5 +1930,15 @@ CMakeFiles/neObj.dir/main.cpp.o: ../main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/i386/endian.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__debug:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sched.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/string_view:

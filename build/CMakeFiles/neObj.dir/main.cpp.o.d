@@ -1,6 +1,6 @@
 CMakeFiles/neObj.dir/main.cpp.o: /Users/dangomushi/NeoObject/main.cpp \
   /Users/dangomushi/NeoObject/./Main.hpp \
-  /Users/dangomushi/NeoObject/./neObj.hpp \
+  /Users/dangomushi/NeoObject/./CRU.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \

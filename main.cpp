@@ -1,10 +1,30 @@
 #include "Main.hpp"
-#include "neObj.hpp"
+#include "CRU.hpp"
 
 #include <fstream>
 
 int langMode;
 int debugMode;
+
+Main::Main(int n, char *arg[]) {
+    version = "cru ver.0.0.1";
+    if (n > 1) {
+        if (arg[1][0] != '-') {
+            langMode = CPP;
+            fileName = string(arg[1]);
+        }
+        else if (arg[1][1] == 'v') {
+            cout << version << endl;
+            exit(0);
+        } else {
+            cout << "Unknown option '" << arg[1] << "'." << endl;
+            exit(0);
+        }
+    } else {
+        cout << "Please add '-$command'." << endl;;
+        exit(0);
+    }
+}
 
 string splitStr(string s1) {
     string ret;
@@ -35,6 +55,30 @@ void Main::write() {
     writing_file.close();
 }
 
+void Main::run() {
+    string Compiler = "CC";
+    string runCmd = Compiler + " " + splitStr(fileName)+".c";
+    char *cstr = new char[runCmd.size() + 1]; // メモリ確保
+
+    std::char_traits<char>::copy(cstr, runCmd.c_str(), runCmd.size() + 1);
+
+    std::system(cstr);
+    delete[] cstr;
+}
+
+void Main::cru() {
+    open();
+
+    token = lexer.lex(fileData);
+    runCode = node.parse(token);
+
+    (langMode == PYTHON) ? runCode += "\nmain()"
+                         : runCode += "\nint start(void) {\n\treturn main();\n}";
+
+    write();
+    run();
+}
+
 int isDigit(string s1) {
     for (int i=0;i<s1.length();i++) {
         if (!isdigit(s1[i]))
@@ -43,19 +87,11 @@ int isDigit(string s1) {
     return False;
 }
 
-int main(void) {
+int main(int argc, char *argcv[]) {
 	debugMode = 1;
-    Main mainclass;
-    vector<tokens> token;
-	mainclass.fileName = "main.my";
+    Main start(argc, argcv);
 
-	mainclass.open();
+	start.cru();
 
-    langMode = CPP;
-    token = lexer.lex(mainclass.fileData);
-    mainclass.runCode = node.parse(token);
-	(langMode == PYTHON) ? mainclass.runCode+="\nmain()" : mainclass.runCode+="\nint start(void) {\n\treturn main();\n}";
-
-	mainclass.write();
     return 0;
 }
